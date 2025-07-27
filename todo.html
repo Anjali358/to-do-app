@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To-Do List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static To-Do App</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      background: #f0f0f0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
     }
 
     .todo-container {
-      background: #ffffff;
+      background: #fff;
       padding: 30px;
-      width: 350px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
     }
 
     h2 {
       text-align: center;
+      color: #333;
       margin-bottom: 20px;
-      color: #333333;
     }
 
     .input-section {
@@ -40,49 +35,50 @@
       margin-bottom: 20px;
     }
 
-    .input-section input {
-      flex: 1;
+    input[disabled], button[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    input[type="text"] {
       padding: 10px;
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      background-color: #eaeaea;
-      cursor: not-allowed;
+      width: 100%;
     }
 
-    .input-section button {
+    button {
       padding: 10px;
       font-size: 16px;
-      background-color: #ccc;
-      color: #666;
       border: none;
       border-radius: 6px;
-      cursor: not-allowed;
+      background-color: #007BFF;
+      color: white;
     }
 
     ul {
-      list-style: none;
+      list-style-type: none;
+      padding: 0;
     }
 
     li {
-      background-color: #f8f8f8;
-      padding: 12px;
+      background: #f9f9f9;
       margin-bottom: 10px;
+      padding: 10px;
       border-radius: 6px;
-      font-size: 16px;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    li input[type="checkbox"] {
+    input[type="checkbox"] {
       transform: scale(1.2);
       accent-color: #007BFF;
     }
 
-    li.completed label {
-      text-decoration: line-through;
-      color: #777;
+    label {
+      font-size: 16px;
     }
   </style>
 </head>
@@ -92,26 +88,22 @@
     <h2>To-Do List</h2>
 
     <div class="input-section">
-      <input type="text" placeholder="Add a task" disabled />
+      <input type="text" placeholder="Add a task" disabled>
       <button disabled>Add</button>
     </div>
 
     <ul>
       <li>
-        <input type="checkbox" id="task1" />
-        <label for="task1">Finish homework</label>
+        <input type="checkbox" id="task1">
+        <label for="task1">Complete HTML homework</label>
       </li>
       <li>
-        <input type="checkbox" id="task2" />
-        <label for="task2">Clean the room</label>
+        <input type="checkbox" id="task2">
+        <label for="task2">Wash dishes</label>
       </li>
       <li>
-        <input type="checkbox" id="task3" />
-        <label for="task3">Read a book</label>
-      </li>
-      <li>
-        <input type="checkbox" id="task4" />
-        <label for="task4">Practice HTML & CSS</label>
+        <input type="checkbox" id="task3">
+        <label for="task3">Read 10 pages</label>
       </li>
     </ul>
   </div>
